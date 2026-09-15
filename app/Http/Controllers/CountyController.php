@@ -22,7 +22,7 @@ class CountyController extends Controller
      */
     public function create()
     {
-        //
+        return view('counties.create');
     }
 
     /**
