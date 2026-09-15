@@ -53,27 +53,34 @@ class CountyController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+  
+    public function edit(County $county)
     {
-        //
+        return view('counties.edit', compact('county'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+
+    public function update(Request $request, County $county)
     {
-        //
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+
+        $county->update($validated);
+        $counties=County::all();
+
+        return redirect()
+            ->route('counties.index',compact('counties'))
+            ->with('status', 'Megye frissítve!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
+
+    public function destroy(County $county)
     {
-        //
+        $county->delete();
+
+        return redirect()
+            ->route('counties.index')
+            ->with('status', 'Megye törölve!');
     }
 }

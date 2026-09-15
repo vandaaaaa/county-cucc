@@ -8,4 +8,7 @@ Route::get('/', [App\Http\Controllers\CountyController::class, 'index'])->name('
 Route::get('/counties', [App\Http\Controllers\CountyController::class, 'index'])->name('counties.index');
 Route::post('/counties', [CountyController::class, 'store'])->name('counties.store');
 Route::get('/counties/create', [App\Http\Controllers\CountyController::class, 'create'])->name('counties.create');
+Route::get('/counties/{county}/edit', [CountyController::class, 'edit'])->name('counties.edit');
+Route::patch('/counties/{county}', [CountyController::class, 'update'])->name('counties.update');
+Route::delete('/counties/{county}', [CountyController::class, 'destroy'])->name('counties.destroy');
 
