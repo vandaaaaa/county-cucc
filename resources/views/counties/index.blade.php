@@ -3,7 +3,7 @@
 
 @section('content')
 
-  <h1>Vármegyék</h1>
+  <h1>Megyék</h1>
 
 @foreach($counties as $county)
   <p>{{ $county->name }}</p>
