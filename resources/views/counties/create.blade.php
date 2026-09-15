@@ -5,8 +5,6 @@
 @section('content')
 <h1>Új megye</h1>
 
-  @include('layouts.flash')
-
   <form action="{{ route('counties.store') }}" method="POST">
       @csrf
 
