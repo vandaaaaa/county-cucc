@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="hu">
 <head>
@@ -9,7 +8,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    
     @include('layouts.navigation')
     <main>
         @yield('content')

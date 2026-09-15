@@ -22,10 +22,8 @@ class CountyController extends Controller
      */
     public function create()
     {
-
-        return view('counties.create');
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -33,16 +31,7 @@ class CountyController extends Controller
     public function store(Request $request)
 
     {
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-        ]);
-
-        $county = County::create($validated);
-        $counties = County::all();
-
-        return redirect()
-            ->route('counties.index', compact('counties'))
-            ->with('status', 'Megye létrehozva!');
+        //
     }
 
     /**
