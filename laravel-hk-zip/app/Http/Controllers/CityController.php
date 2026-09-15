@@ -3,18 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\County;
 
-class CountyController extends Controller
+class CityController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $counties = County::get();
-
-        return view('counties.index', compact('counties'));
+        //
     }
 
     /**
@@ -22,16 +19,13 @@ class CountyController extends Controller
      */
     public function create()
     {
-
-        return view('counties.create');
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-
     {
         //
     }

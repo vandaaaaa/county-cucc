@@ -22,10 +22,8 @@ class CountyController extends Controller
      */
     public function create()
     {
-
-        return view('counties.create');
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
